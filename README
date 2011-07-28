@@ -1,1 +1,47 @@
-#git Repository erstellt.
+r(uby)edgar is a re-implementation of edgar.php 
+
+tested with ruby 1.9.2, installed via https://rvm.beginrescueend.com/
+
+TODO:
+implement some triggers
+
+# let the bot answer to the question "What is your purpose"
+# took's trigger for random excuses for bugs
+# whoami !whoami
+# beschimpfen / insult !beschimpfe
+# word of the day !wod
+# Raab-like audio snippets !snip
+# UNIX timestamp "unixtime"
+# translate !trans
+# language codes !lang
+# !score trivia2 scores?
+# !trivia ?
+# !solution ?
+# !solve ?
+# googlefight trigger !gf
+# trigger for comfort radio "current song" !radio
+# revision !version OR !revision
+# Sonnenaufgang und -untergang und so bzw. "wann geht die sonne auf"
+# robih "Moin." special trigger
+# ircspy trigger "spy on $nick" "spy on"
+# dollar rate "dollar"
+# swear at $user feature "swear at"
+# trigger to teach padma (infobot/flooterbuck) from wiktionary "teach"
+# calls wiktionary_teach 
+# lookup 0900 numbers "0900"
+# lookup linktitles (done)
+# get exploits from milw0rm.com RSS feed
+# cowsay "cowsay"
+# wikistats todo "wstodo"
+# define "define" ?
+# help funktion !help (old: !hel)
+# Wikipedia (all languages, experimental)
+# S23-Wiki !s23
+# Wiktionary (en and de) !wk
+# rot13 !r13
+# dns !dns
+# boincstants
+# download image (done)
+# svn lookup
+
+
