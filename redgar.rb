@@ -4,6 +4,7 @@ require 'nokogiri'
 require 'image_downloader'
 
    def download full_url, to_here
+      File.umask(022)	
       writeOut = open(to_here, "wb")
       writeOut.write(open(full_url).read)
       writeOut.close
@@ -11,8 +12,8 @@ require 'image_downloader'
 
 bot = Cinch::Bot.new do
   configure do |c|
-    c.server = "irc.efnet.org"
-#    c.server="localhost"
+#    c.server = "irc.efnet.org"
+    c.server="localhost"
     c.channels = ["#seti23" ]
     c.nick = "redgar"
     c.user = "user"
@@ -37,7 +38,7 @@ bot = Cinch::Bot.new do
 	doc = Nokogiri::HTML(open(urls[0]))
 	title=doc.at_css("title")
 	if title != nil
-		string=String.new(doc.at_css("title"))
+		string=String.new(title) #make sure that title is a string
 		#get rid of carriage return characters and so on
        		string.gsub!(/\n/, '')
 		string.gsub!(/\t/, '')
