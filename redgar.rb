@@ -35,7 +35,7 @@ bot = Cinch::Bot.new do
 	end
 	
 	#extract title
-	doc = Nokogiri::HTML(open(urls[0]))
+	doc = Nokogiri::HTML(open(urls[0],"User-Agent" => "https://github.com/hundfred/redgar| hundfred@s23.org"))
 	title=doc.at_css("title")
 	if title != nil
 		string=String.new(title) #make sure that title is a string
