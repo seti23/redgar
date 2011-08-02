@@ -6,7 +6,7 @@ require 'image_downloader'
    def download full_url, to_here
       File.umask(022)	
       writeOut = open(to_here, "wb")
-      writeOut.write(open(full_url).read)
+      writeOut.write(open(full_url, "User-Agent" => "https://github.com/hundfred/redgar| hundfred@s23.org").read)
       writeOut.close
     end
 
