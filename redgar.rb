@@ -2,11 +2,11 @@ require 'cinch'
 require 'open-uri'
 require 'nokogiri'
 require 'image_downloader'
-
+user_agent="https://github.com/hundfred/redgar| hundfred@s23.org"
    def download full_url, to_here
       File.umask(022)	
       writeOut = open(to_here, "wb")
-      writeOut.write(open(full_url, "User-Agent" => "https://github.com/hundfred/redgar| hundfred@s23.org").read)
+      writeOut.write(open(full_url, "User-Agent" => "#{user_agent}").read)
       writeOut.close
     end
 
@@ -35,7 +35,7 @@ bot = Cinch::Bot.new do
 	end
 	
 	#extract title
-	doc = Nokogiri::HTML(open(urls[0],"User-Agent" => "https://github.com/hundfred/redgar| hundfred@s23.org"))
+	doc = Nokogiri::HTML(open(urls[0],"User-Agent" => "#{user_agent}"))
 	title=doc.at_css("title")
 	if title != nil
 		string=String.new(title) #make sure that title is a string
