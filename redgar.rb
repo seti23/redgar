@@ -2,6 +2,9 @@ require 'cinch'
 require 'open-uri'
 require 'nokogiri'
 require 'image_downloader'
+
+
+##setting user-agent
 user_agent="https://github.com/hundfred/redgar| hundfred@s23.org"
    def download full_url, to_here
       File.umask(022)	
