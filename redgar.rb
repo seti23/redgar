@@ -91,7 +91,7 @@ end
 bot = Cinch::Bot.new do
   configure do |c|
     c.server = "localhost"
-    c.channels = ["channel1","channel2"]
+    c.channels = ["#channel1","#channel2"]
     c.nick = "redgar"
     c.user = "user"
     c.realname = "real"
