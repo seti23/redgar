@@ -107,7 +107,7 @@ bot = Cinch::Bot.new do
 #	channel_id=get_channel_id(con,channel)
 #	m.reply "#{channel} ID:#{channel_id}"	
     else
-      urls = URI.extract(m.message, "http")
+      urls = URI.extract(m.message,["http","https"])
       if not urls.empty?
          #url is pointing to an image -> download it
   	url=String.new(urls[0])
