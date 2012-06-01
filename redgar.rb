@@ -131,7 +131,11 @@ bot = Cinch::Bot.new do
   		string.gsub!(/\t/, '')
   		string.gsub!(/![a-zA-Z\d!$&,.]/,'') #i wonder i this works, there are still some spaces in the youtube-title
   		string.strip! #eleminate double spaces
-  		m.reply "title: #{string}"
+
+		#check, if channel output of title is wanted
+                if ["#hiahin","#channel1"].include?(channel)==true
+                        m.reply "title: #{string}"
+                end
        	end
 	con = Mysql::new($mysql_hostname,$mysql_db,$mysql_user,$mysql_pwd) #open db-connection
 	#store url, title, channel, and irc_handle in db
