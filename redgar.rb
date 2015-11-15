@@ -1,5 +1,5 @@
 require 'cinch'
-require 'open-uri'
+#require 'open-uri'
 require 'nokogiri'
 require 'image_downloader'
 require 'mysql'
@@ -78,12 +78,12 @@ def insert_url(con,url,irc_handle,channel,title)
 end
 
 #download
-def download full_url, to_here
-      File.umask(022)	
-      writeOut = open(to_here, "wb")
-      writeOut.write(open(full_url, "User-Agent" => "#{user_agent}").read)
-      writeOut.close
-end
+#def download full_url, to_here
+#      File.umask(022)	
+#      writeOut = open(to_here, "wb")
+#      writeOut.write(open(full_url, "User-Agent" => "#{user_agent}").read)
+#      writeOut.close
+#end
 
 #end-of-subroutines---------------------------------------------------------------
 
